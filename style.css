@@ -1,0 +1,181 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;    
+}
+
+body {
+    background-image: linear-gradient(120deg,#71d890, #5d9be2 );
+    color: rgb(255, 255, 255);
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+}
+
+header {
+    font-weight: 1.5rem;
+}
+
+header, form {
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form input, form button {
+    padding: 0.5rem;
+    font-size: 2rem;
+    border: none;
+    background: white;
+}
+
+form button {
+    color: #d88771;
+    background: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+form button:hover {
+    background: #d88771;
+    color: white;
+}
+
+
+.todo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo-list {
+    min-width: 30%;
+    list-style: none;
+}
+
+.todo {
+    margin: 0.5rem;
+    background: white;
+    color: black;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.5s ease;
+    cursor: move;
+}
+
+.todo li {
+    flex: 1;
+}
+
+.trash-btn, .complete-btn {
+    background: rgb(255, 136, 0);
+    color: white;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.complete-btn {
+    background: yellowgreen;
+}
+
+.todo-item {
+    padding: 0rem 0.5rem;
+}
+
+.fa-trash, .fa-check {
+    pointer-events: none;
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.fall {
+    transform: translateY(8rem) rotateZ(20deg);
+    opacity: 0;
+}
+
+/*CUSTOM SELECTOR */
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    outline: 0;
+    box-shadow: none;
+    border: 0 !important;
+    /* background-image: none; */
+}
+
+/* Custom Select */
+.select {
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+select {
+    color: #ff6f47;
+    /* font-family: "Poppins", sans-serif; */
+    cursor: pointer;
+    width: 10rem;
+    padding: 1rem;
+}
+
+/* Arrow */
+.select::after {
+    content: "\25BC";
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    background: #ff6f47;
+    cursor: pointer;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.select:hover::after {
+    background-color: white;
+    color: #ff6f47;
+}
+
+.todo.over {
+    border: 3px dotted #666;
+}
+
+/* Background colors */
+.bg-colors {
+    border: 3px solid rgb(63, 63, 63);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    margin: 5rem auto;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.bg-color {
+    display: table-cell;
+    width: 50px;
+    height: 50px; 
+    margin: 3px;
+    cursor: pointer;
+}
+
+.clr1 {
+    background-image: linear-gradient(120deg,#71d890, #5d9be2 );
+}
+
+.clr2 {
+    background-image: linear-gradient(120deg,#e78367, #eec950 );
+}
+
+.clr3 {
+    background-image: linear-gradient(120deg,#d871cf, #5f5de2 );
+}
